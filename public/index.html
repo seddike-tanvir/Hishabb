@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hishabb - Do Everyday's Hishab Easy</title>
+    <link rel="shortcut icon" href="/public/assets/files/fav.png" type="image/x-icon">
 
     <!-- add fontawesome, tailwind, daisyUI -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,8 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
     <!--add css  -->
-    <link rel="stylesheet" href="/public/assets/css/style.css">
-    <link rel="stylesheet" href="/public/assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
 </head>
 <body>
 
@@ -24,30 +25,65 @@
                 <p class="logo text-[12px] text-left font-normal mt-[-0.8rem] ml-[1px] text-[#00000057]">Do Everyday's Hishab Easy</p>
             </div>
 
-            <div class="navBtnAreaWrapper hidden md:flex gap-[10px]">
-                <button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white"><i class="fa-solid fa-circle-question"></i> FAQ</button>
-                <button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white"><i class="fa-solid fa-book-open"></i> Learn</button>
-                <button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+            <div class="navBtnAreaWrapper hidden md:flex gap-[1rem]">
+                <a href="./docs" class="flex items-center gap-2"><button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white hover:scale-99"><i class="fa-solid fa-book-open"></i> Docs</button></a>
+                <a href="./faq" class="flex items-center gap-2"><button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white hover:scale-99"><i class="fa-solid fa-circle-question"></i> FAQ</button></a>
+                <div class="navBtnAreaWrapper hidden md:flex ml-[-5px]">
+                    <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost btn-circle" title="User">
+                                <i class="fa-solid fa-circle-user text-[1.7rem] text-cyan-600 bg-transparent hover:scale-99"></i>
+                            </div>
+                            <ul
+                                tabindex="-1"
+                                class="menu menu-sm dropdown-content  rounded-box z-1 mt-8 w-[11rem] p-2 ml-[-8rem] bg-white border border-gray-100 shadow-xl">
+                                <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./user/profile" class="flex items-center gap-2"><i class="fa-solid fa-user"></i> Profile</a></li>
+                                <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./user/dashboard" class="flex items-center gap-2"><i class="fa-solid fa-chart-bar"></i> Dashboard</a></li>
+                                <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./user/logout" class="flex items-center gap-2"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                            </ul>
+                    </div>
+                </div>
             </div>
+
             <div class="navBtnAreaWrapper flex md:hidden">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-180 flip" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
                     </div>
                     <ul
                         tabindex="-1"
-                        class="menu menu-sm dropdown-content  rounded-box z-1 mt-8 w-[11rem] p-2 ml-[-8rem] bg-white border border-gray-100 shadow-xl">
-                        <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
-                        <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black"><i class="fa-solid fa-book-open"></i> Learn</a></li>
-                        <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                        class="menu menu-sm dropdown-content  rounded-box z-1 mt-8 w-[12rem] p-2 ml-[-10rem] bg-white border border-gray-100 shadow-xl">
+                        <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./docs" class="flex items-center gap-2"><i class="fa-solid fa-book-open"></i> Docs</a></li>
+                        <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./faq" class="flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+                        <li>
+                            <details>
+                                <summary class="text-[.8rem]">
+                                    <a class="hover:text-white bg-transparent hover:bg-cyan-600 text-blackflex items-center gap-2"><i class="fa-solid fa-circle-user"></i>&nbsp; User</a>
+                                </summary>
+                                <ul class="p-2 bg-base-100  z-1">
+                                    <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./user/profile" class="flex items-center gap-2"><i class="fa-solid fa-user"></i> Profile</a></li>
+                                    <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./user/dashboard" class="flex items-center gap-2"><i class="fa-solid fa-chart-bar"></i> Dashboard</a></li>
+                                    <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="./user/logout" class="flex items-center gap-2"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                                </ul>
+                            </details>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    
 
 
+
+    <section class="heroWrapper  w-full mt-[5vh] h-min flex flex-col md:flex-row items-center justify-center gap-[3rem] px-[2rem]">
+        <div class="heroTextArea flex flex-col gap-[1.5rem] w-11/12 md:w-[50%] mt-[10vh]">
+            <h1 class="text-[2.5rem] md:text-[3.5rem] font-bold text-gray-800">
+                Do Everyday's <span class="text-cyan-600">Hishabb</span> Easy
+            </h1>
+            <p class="text-[1.1rem] md:text-[1.3rem] text-gray-600 mt-[-1rem]">
+                Simplify your daily accounting with our intuitive and user-friendly platform.
+            </p>
+        </div>
+    </section>
 
 
 
@@ -65,6 +101,6 @@
 
 
     <!-- add js -->
-    <script src="/public/assets/js/app.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs | Hishabb </title>
+    <link rel="shortcut icon" href="/public/assets/files/fav.png" type="image/x-icon">
+
+    <!-- add fontawesome, tailwind, daisyUI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <!--add css  -->
+    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/fonts.css">
+</head>
+<body>
+
+    <section class="navAreaSection  w-full py-[1.2rem] bg-white flex justify-center items-center shadow-lg shadow-[#25beff0f]"> <!-- bg-[#badeff42] -->
+        <div class="navArea  w-11/12 max-w-[90vw] h-full flex flex-row items-center justify-between">
+            <div class="navLogoWrapper  flex flex-col cursor-pointer">
+                <p class="logo text-[2.1rem] text-left font-semibold text-cyan-600 tracking-[3px]">Hishabb</p>
+                <p class="logo text-[12px] text-left font-normal mt-[-0.8rem] ml-[1px] text-[#00000057]">Do Everyday's Hishab Easy</p>
+            </div>
+
+            <div class="navBtnAreaWrapper hidden md:flex gap-[10px]">
+                <a href="../" class="flex items-center gap-2"><button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white hover:scale-99"><i class="fa-solid fa-angles-left"></i> </button></a>
+                <a href="../faq" class="flex items-center gap-2"><button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white hover:scale-99"><i class="fa-solid fa-circle-question"></i> FAQ</button></a>
+                <!-- <button class="btn border border-cyan-600 text-cyan-600 bg-transparent hover:bg-cyan-600 hover:text-white hover:scale-99"><a class="flex items-center gap-2"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></button> -->
+            </div>
+            <div class="navBtnAreaWrapper flex md:hidden">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                    </div>
+                    <ul
+                        tabindex="-1"
+                        class="menu menu-sm dropdown-content  rounded-box z-1 mt-8 w-[11rem] p-2 ml-[-8rem] bg-white border border-gray-100 shadow-xl">
+                        <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="../" class="flex items-center gap-2"><i class="fa-solid fa-angles-left"></i> HomePage</a></li>
+                        <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-black" href="../faq" class="flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> FAQ</a><li>
+                        <!-- <li><a class="hover:text-white bg-transparent hover:bg-cyan-600 text-blackflex items-center gap-2"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="heroWrapper  w-full mt-[5vh] h-min flex flex-col md:flex-row items-center justify-center gap-[3rem] px-[2rem]">
+        <div class="heroTextArea flex flex-col gap-[1.5rem] w-11/12 md:w-[50%] mt-[7vh]">
+            <h1 class="text-[2.5rem] md:text-[3.5rem] font-bold text-gray-800">
+                Learn Basic <span class="text-cyan-600">Hishabb</span>
+            </h1>
+            <p class="text-[1.1rem] md:text-[1.3rem] text-gray-600 mt-[-1rem]">
+                learn how to use Hishabb and make your daily accounting easier. Explore our comprehensive documentation to get started and make the most out of our platform.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="footerArea bg-white flex flex-col w-[100%] mx-auto mt-[20vh] h-auto justify-between py-[2rem] px-[2rem] pb-[2.5rem]  border-t-[1px] border-[#25beff23]">
+        <div class="footer_banner_creditArea flex flex-col text-center text-gray-500 text-[.9rem] font-normal">
+                <!-- <p class="credit text-center text-gray-500"><span>Team Programing hero</span>.&nbsp; From <a class="links underline transition-[.6s] hover:text-gray-400 hover:no-underline" href="/resources/English-Janala.pdf" title="Design sample from Programming Hero">design</a>, this page was developed by <span><a class="links underline transition-[.6s] hover:text-gray-400 hover:no-underline" href="https://seddike-tanvir.github.io" title="Go to Seddike's Profile">Seddike Tanvir</a></span>.</p> -->
+                <p class="copyright text-center">&copy; 2026 <span title="XenSoft Ltd. - Commits NextGen Innovation" class="links  transition-[.6s] hover:text-gray-400 hover:underline cursor-pointer">XenSoft</span><span title="Sedike Tanvir"></span>. All Rights Reserved.</p>
+        </div>
+    </section>
+
+
+
+    <!-- add js -->
+    <script src="/public/assets/js/app.js"></script>
+</body>
+</html>
